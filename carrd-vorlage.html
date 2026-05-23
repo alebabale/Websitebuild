@@ -1,0 +1,461 @@
+<!--
+  Carrd Vorlage:
+  1. In Carrd ein "Embed" Element hinzufügen.
+  2. Type/Style: Code.
+  3. Diesen kompletten Code einfügen.
+  4. Falls das Bild nicht lädt, die URL in --hero-image ersetzen.
+-->
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800&family=Roboto:wght@700&family=Rowdies:wght@700&display=swap" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+<section class="balloon-carrd">
+  <style>
+    .balloon-carrd {
+      --dark: #11100e;
+      --cream: #f7f3eb;
+      --gold: #a88a00;
+      --gold-light: #c8aa19;
+      --ink: #17130f;
+      --text: #f8f5ec;
+      --muted: rgba(248, 245, 236, 0.72);
+      --hero-image: url("https://ballonfahren.carrd.co/assets/images/container04.jpg?v=dec30ab5");
+      margin: 0;
+      color: var(--text);
+      background: var(--dark);
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      line-height: 1.55;
+      overflow: hidden;
+    }
+
+    .balloon-carrd * {
+      box-sizing: border-box;
+    }
+
+    .balloon-carrd a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .balloon-hero,
+    .balloon-section,
+    .balloon-booking,
+    .balloon-faq,
+    .balloon-final {
+      padding: clamp(82px, 12vw, 150px) clamp(22px, 6vw, 84px);
+    }
+
+    .balloon-hero {
+      min-height: 100svh;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(17,16,14,.96), rgba(17,16,14,.72) 48%, rgba(17,16,14,.12)),
+        linear-gradient(0deg, rgba(17,16,14,.86), rgba(17,16,14,.05) 58%),
+        var(--hero-image);
+      background-size: cover;
+      background-position: center right;
+    }
+
+    .balloon-panel {
+      width: min(100%, 760px);
+      padding: clamp(34px, 5vw, 58px);
+      border-radius: 0 0 56px 0;
+      background: rgba(17, 16, 14, 0.64);
+      box-shadow: 0 32px 90px rgba(0, 0, 0, 0.34);
+      backdrop-filter: blur(3px);
+    }
+
+    .balloon-kicker {
+      margin: 0 0 24px;
+      color: var(--gold-light);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .balloon-carrd h1,
+    .balloon-carrd h2 {
+      margin: 0 0 24px;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      line-height: 1.2;
+      letter-spacing: .175rem;
+    }
+
+    .balloon-carrd h1 {
+      font-size: clamp(2.65rem, 5.4vw, 4.15rem);
+      font-weight: 100;
+    }
+
+    .balloon-carrd h2 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: .075rem;
+      text-align: center;
+    }
+
+    .balloon-carrd h3 {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      font-weight: 400;
+      line-height: 1.08;
+    }
+
+    .balloon-copy,
+    .balloon-note,
+    .balloon-section p,
+    .balloon-booking p {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .balloon-copy {
+      font-size: .875rem;
+      line-height: 1.875;
+      letter-spacing: .025rem;
+    }
+
+    .balloon-note {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.625;
+      letter-spacing: .125rem;
+    }
+
+    .balloon-stats,
+    .balloon-trust,
+    .balloon-badges {
+      letter-spacing: .175rem;
+    }
+
+    .balloon-actions {
+      display: grid;
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .balloon-btn,
+    .balloon-card-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 68px;
+      padding: 18px 30px;
+      border: 0;
+      border-radius: 999px;
+      font-family: Roboto, sans-serif;
+      font-size: clamp(1.02rem, 2vw, 1.22rem);
+      font-weight: 800;
+      letter-spacing: .075rem;
+      cursor: pointer;
+    }
+
+    .balloon-btn::after,
+    .balloon-card-cta::after {
+      content: "→";
+      font-size: 1.55rem;
+    }
+
+    .balloon-btn.light {
+      color: var(--ink);
+      background: var(--cream);
+    }
+
+    .balloon-btn.gold,
+    .balloon-card-cta {
+      color: #fff;
+      background: var(--gold);
+      box-shadow: 0 18px 46px rgba(168, 138, 0, .28);
+    }
+
+    .balloon-stats,
+    .balloon-trust,
+    .balloon-badges {
+      display: grid;
+      gap: 12px;
+      color: var(--gold-light);
+      font-weight: 800;
+    }
+
+    .balloon-section,
+    .balloon-booking,
+    .balloon-faq {
+      background:
+        linear-gradient(rgba(17,16,14,.88), rgba(17,16,14,.94)),
+        var(--hero-image);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .balloon-heading {
+      max-width: 920px;
+      margin: 0 auto 46px;
+      text-align: center;
+    }
+
+    .balloon-grid {
+      display: grid;
+      gap: 22px;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .balloon-card,
+    .balloon-step,
+    .balloon-calendly,
+    .balloon-faq details {
+      border-radius: 48px;
+      background: var(--cream);
+      color: var(--ink);
+      box-shadow: 0 32px 90px rgba(0, 0, 0, .34);
+    }
+
+    .balloon-step,
+    .balloon-card,
+    .balloon-faq details {
+      padding: 30px;
+    }
+
+    .balloon-step span {
+      display: grid;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 28px;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--gold);
+      font-size: 1.35rem;
+      font-family: Rowdies, sans-serif;
+      font-weight: 700;
+      letter-spacing: .12rem;
+    }
+
+    .balloon-step p,
+    .balloon-card span,
+    .balloon-faq details p {
+      color: rgba(23, 19, 15, .68);
+      font-weight: 700;
+    }
+
+    .balloon-card {
+      display: grid;
+      gap: 18px;
+      min-height: 430px;
+      text-align: center;
+    }
+
+    .balloon-icon {
+      margin: 0;
+      font-size: 2.65rem;
+    }
+
+    .balloon-card strong {
+      color: var(--gold);
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .balloon-booking {
+      display: grid;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .balloon-calendly {
+      min-height: 720px;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    .balloon-calendly-fallback {
+      display: grid;
+      gap: 14px;
+      padding: 22px 18px 10px;
+      text-align: center;
+    }
+
+    .balloon-calendly-fallback strong,
+    .balloon-faq summary {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .calendly-inline-widget {
+      width: 100%;
+      height: 640px;
+      min-width: 280px;
+    }
+
+    .balloon-faq-list {
+      display: grid;
+      gap: 16px;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .balloon-faq summary {
+      cursor: pointer;
+      font-size: 1.08rem;
+      list-style: none;
+    }
+
+    .balloon-faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .balloon-final {
+      min-height: 78svh;
+      display: grid;
+      align-items: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(17,16,14,.62), rgba(17,16,14,.86)),
+        var(--hero-image);
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (min-width: 720px) {
+      .balloon-actions,
+      .balloon-stats,
+      .balloon-trust {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .balloon-grid.steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .balloon-grid.offers {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .balloon-booking {
+        grid-template-columns: .92fr 1.08fr;
+      }
+    }
+  </style>
+
+  <div class="balloon-hero">
+    <div class="balloon-panel">
+      <p class="balloon-kicker">Ballonfahrten über Bietigheim-Bissingen & Umgebung</p>
+      <h1>Abenteuer über Stadt Land Fluss.</h1>
+      <p class="balloon-copy">Schweben Sie lautlos über Bietigheim-Bissingen, Stuttgart und Pforzheim. Buchen Sie Ihre Ballonfahrt oder verschenken Sie ein Erlebnis, das garantiert in Erinnerung bleibt.</p>
+      <p class="balloon-note">Wir setzen uns einige Tage vor dem Termin mit Ihnen in Verbindung. Wenn das Wetter mitmacht, starten wir zu Sonnenauf- oder Sonnenuntergang.</p>
+      <div class="balloon-actions">
+        <a class="balloon-btn light" href="https://calendly.com/alezaffino271/wunschtermin-ballonfahrt" data-calendly-popup>Jetzt Fahrt buchen!</a>
+        <a class="balloon-btn gold" href="#balloon-offers">Gutschein verschenken</a>
+      </div>
+      <div class="balloon-stats">
+        <span>★★★★★ 4.9 Bewertung</span>
+        <span>Über 1.000 Gäste</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="balloon-section">
+    <div class="balloon-heading">
+      <p class="balloon-kicker">Ein unvergessliches Erlebnis</p>
+      <h2>Genießen Sie eine Reise über das Neckartal.</h2>
+      <p>Vom gemeinsamen Aufbau bis zur sanften Landung: eine Ballonfahrt ist Geschenk, Abenteuer und Erinnerung zugleich.</p>
+    </div>
+    <div class="balloon-trust">
+      <span>✓ Persönliche Betreuung</span>
+      <span>✓ Wetterabhängige Terminplanung</span>
+    </div>
+  </div>
+
+  <div class="balloon-section">
+    <div class="balloon-heading">
+      <p class="balloon-kicker">So läuft Ihre Ballonfahrt ab</p>
+      <h2>Vom Treffpunkt bis zur traditionellen Ballonfahrertaufe.</h2>
+    </div>
+    <div class="balloon-grid steps">
+      <article class="balloon-step"><span>1</span><h3>Treffpunkt & Vorbereitung</h3><p>Gemeinsam bereiten wir den Ballon vor und besprechen den Ablauf der Fahrt.</p></article>
+      <article class="balloon-step"><span>2</span><h3>Der gemeinsame Aufbau</h3><p>Erleben Sie hautnah, wie der Ballon langsam zum Leben erwacht.</p></article>
+      <article class="balloon-step"><span>3</span><h3>60-90 Minuten Fahrt</h3><p>Schweben Sie lautlos über Bietigheim-Bissingen und das Neckartal.</p></article>
+      <article class="balloon-step"><span>4</span><h3>Ballonfahrertaufe</h3><p>Zum Abschluss erhalten Sie Ihre persönliche Ballonfahrertaufe.</p></article>
+    </div>
+  </div>
+
+  <div class="balloon-section" id="balloon-offers">
+    <div class="balloon-heading">
+      <p class="balloon-kicker">Ballonfahrten & Gutscheine</p>
+      <h2>Wählen Sie Ihr Ballon-Erlebnis.</h2>
+    </div>
+    <div class="balloon-grid offers">
+      <article class="balloon-card"><p class="balloon-icon">🎈</p><h3>Klassische Ballonfahrt</h3><strong>Ab 249 € pro Person</strong><a class="balloon-card-cta" href="https://calendly.com/alezaffino271/wunschtermin-ballonfahrt" data-calendly-popup>Jetzt buchen</a><span>Perfekt für Einzelpersonen oder kleine Gruppen.</span></article>
+      <article class="balloon-card"><p class="balloon-icon">❤️</p><h3>Romantikfahrt für Zwei</h3><strong>Ab 549 €</strong><a class="balloon-card-cta" href="https://calendly.com/alezaffino271/wunschtermin-ballonfahrt" data-calendly-popup>Jetzt buchen</a><span>Die perfekte Geschenkidee für besondere Momente.</span></article>
+      <article class="balloon-card"><p class="balloon-icon">🏭🏬</p><h3>Gruppen- & Firmenevents</h3><strong>Individuelles Angebot</strong><a class="balloon-card-cta" href="https://calendly.com/alezaffino271/wunschtermin-ballonfahrt" data-calendly-popup>Anfrage senden</a><span>Für Geburtstag, Firmenevent oder Abenteuer mit Freunden.</span></article>
+    </div>
+  </div>
+
+  <div class="balloon-booking">
+    <div>
+      <p class="balloon-kicker">Online Terminbuchung</p>
+      <h2>Buchen Sie Ihre Ballonfahrt in weniger als 2 Minuten.</h2>
+      <p>Wählen Sie Ihren Wunschtermin und sichern Sie sich Ihr persönliches Abenteuer über Stadt, Land und Fluss.</p>
+      <div class="balloon-badges">
+        <span>✓ Kostenloser Ersatztermin bei schlechtem Wetter</span>
+        <span>✓ Persönliche Bestätigung vor der Fahrt</span>
+      </div>
+    </div>
+    <div class="balloon-calendly">
+      <div class="balloon-calendly-fallback">
+        <strong>Wunschtermin direkt sichern</strong>
+        <a class="balloon-btn gold" href="https://calendly.com/alezaffino271/wunschtermin-ballonfahrt" data-calendly-popup>Calendly öffnen</a>
+      </div>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/alezaffino271/wunschtermin-ballonfahrt"></div>
+    </div>
+  </div>
+
+  <div class="balloon-faq">
+    <div class="balloon-heading">
+      <p class="balloon-kicker">Häufige Fragen</p>
+      <h2>Die wichtigsten Informationen rund um Ihre Ballonfahrt.</h2>
+    </div>
+    <div class="balloon-faq-list">
+      <details open><summary>Wann findet die Ballonfahrt statt?</summary><p>Die Fahrten finden je nach Wetterlage bei Sonnenaufgang oder Sonnenuntergang statt.</p></details>
+      <details><summary>Was passiert bei schlechtem Wetter?</summary><p>Sollte das Wetter ungeeignet sein, vereinbaren wir kostenlos einen Ersatztermin.</p></details>
+      <details><summary>Wie lange dauert eine Ballonfahrt?</summary><p>Die reine Fahrt dauert etwa 60 bis 90 Minuten. Insgesamt sollten Sie ungefähr 3 bis 4 Stunden einplanen.</p></details>
+      <details><summary>Kann ich einen Gutschein verschenken?</summary><p>Ja, Ballonfahrten eignen sich perfekt als besonderes Geschenk.</p></details>
+    </div>
+  </div>
+
+  <div class="balloon-final">
+    <div>
+      <p class="balloon-kicker">Unvergessliches Erlebnis</p>
+      <h2>Erleben Sie die Freiheit über den Wolken.</h2>
+      <a class="balloon-btn gold" href="https://calendly.com/alezaffino271/wunschtermin-ballonfahrt" data-calendly-popup>Jetzt Wunschtermin sichern</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const url = "https://calendly.com/alezaffino271/wunschtermin-ballonfahrt";
+
+      function openPopup(event) {
+        event.preventDefault();
+
+        if (window.Calendly) {
+          window.Calendly.initPopupWidget({ url });
+          return;
+        }
+
+        window.open(url, "_blank", "noopener");
+      }
+
+      document.querySelectorAll(".balloon-carrd [data-calendly-popup]").forEach((button) => {
+        button.addEventListener("click", openPopup);
+      });
+    })();
+  </script>
+</section>
