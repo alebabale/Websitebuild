@@ -242,6 +242,7 @@ section {
 
 .section-dark,
 .experience,
+.moments,
 .offers,
 .booking,
 .faq {
@@ -328,6 +329,47 @@ details p {
   gap: 22px;
   max-width: 1160px;
   margin: 0 auto;
+}
+
+.moment-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.moment-card {
+  overflow: hidden;
+  border-radius: 48px;
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.moment-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.moment-card div {
+  padding: clamp(26px, 4vw, 38px);
+}
+
+.moment-card span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 0.175rem;
+  text-transform: uppercase;
+}
+
+.moment-card p {
+  color: rgba(23, 19, 15, 0.68);
+  font-weight: 700;
+  letter-spacing: 0.025rem;
 }
 
 .offer-card {
@@ -497,6 +539,10 @@ footer div {
 
   .cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .moment-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .booking {
