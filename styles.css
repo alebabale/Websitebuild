@@ -244,14 +244,29 @@ section {
 .experience,
 .moments,
 .offers,
-.booking,
-.faq {
+.booking {
   background:
     linear-gradient(rgba(17, 16, 14, 0.88), rgba(17, 16, 14, 0.94)),
     url("assets/carrd-container04.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+}
+
+.faq {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 14% 10%, rgba(168, 138, 0, 0.08), transparent 30%),
+    linear-gradient(180deg, #fbf7ee 0%, #f2eadb 100%);
+}
+
+.faq .section-kicker,
+.faq h2 {
+  color: var(--gold);
+}
+
+.faq .section-heading p {
+  color: rgba(23, 19, 15, 0.62);
 }
 
 .section-heading {
@@ -461,7 +476,7 @@ details {
 }
 
 summary {
-  color: var(--ink);
+  color: var(--gold);
   cursor: pointer;
   font-size: 1.08rem;
   font-weight: 800;
